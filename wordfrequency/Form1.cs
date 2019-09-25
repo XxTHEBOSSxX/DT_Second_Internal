@@ -164,6 +164,29 @@ namespace wordfrequency
 
                 //Calculate frequencies for words 
                 CountWordsInText(richTextBox1.Text, words, familyCount, familyWords);
+
+                var sortedwords = from item in words
+                                  orderby item.Value descending
+                                  select item;
+
+                wordFrequency.Clear();
+                //Display word frequencies sorted on counts. Words with o count will not be displayed
+                foreach (var item in sortedwords)
+                {
+                    if (item.Value > 0)
+                    {
+
+                        wordFrequency.AppendText(item.Key);
+                        wordFrequency.AppendText("\t");
+                        wordFrequency.AppendText(item.Value.ToString());
+                        wordFrequency.AppendText("\t");
+
+                      
+                        wordFrequency.AppendText(Environment.NewLine);
+
+                    }
+                }
+
             }
             else
             {
