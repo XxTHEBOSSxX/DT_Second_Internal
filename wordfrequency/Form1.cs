@@ -19,15 +19,27 @@ namespace wordfrequency
         {
             InitializeComponent();
         }
+        
+        
+
+        
+        
+
 
         //'Analyse' button that the user presses to analyse the text (word count, character count, frequency ect..)
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            if (this.richTextBox1.Text != "")
+            {
 
                 this.richTextBox1.Focus();
                 this.richTextBox1.Clear();
-          
+            }
+            else
+            {
+                MessageBox.Show("Please enter propper text.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.richTextBox1.Focus();
+            }
         }
         // Pressing this button will clear all the text boxes. 
         private void Button2_Click(object sender, EventArgs e)
