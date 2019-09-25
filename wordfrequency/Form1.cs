@@ -92,9 +92,32 @@ namespace wordfrequency
                 file.Close();
             }
         }
+        private void CountWordsInText(string content, Dictionary<string, int> words,
+       Dictionary<string, int> rootwords,
+           Dictionary<string, string> family)
 
-            //'Analyse' button that the user presses to analyse the text (word count, character count, frequency ect..)
-            private void button1_Click(object sender, EventArgs e)
+        {
+            //serpertate the string into words
+            var wordPattern = new Regex(@"\w+");
+            //for each word in the user input covert into a uppercase for robustness
+
+            foreach (Match match in wordPattern.Matches(content.ToUpper()))
+            {
+                int currentCount = 0;
+                string root = string.Empty;
+                //Get the current count of the word from the dictionary
+                words.TryGetValue(match.Value, out currentCount);
+                currentCount++;
+                //If the word is found then inicrament the count by one 
+                words[match.Value] = currentCount;
+                currentCount = 0;
+                
+            }
+        }
+
+
+        //'Analyse' button that the user presses to analyse the text (word count, character count, frequency ect..)
+        private void button1_Click(object sender, EventArgs e)
         {
             if (this.richTextBox1.Text != "")
             {
@@ -138,6 +161,9 @@ namespace wordfrequency
                 int numberofchars = CountChars(richTextBox1.Text);
                 string Countchars = Convert.ToString(numberofchars);
                 richTextBox3.AppendText(Countchars);
+
+                //Calculate frequencies for words 
+                CountWordsInText(richTextBox1.Text, words, familyCount, familyWords);
             }
             else
             {
