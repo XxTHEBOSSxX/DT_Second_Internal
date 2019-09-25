@@ -203,6 +203,26 @@ namespace wordfrequency
                     }
                 }
 
+                //Display root words and their frequencies. Words with 0 count will not be displayed
+                var sortedRoots = from item in familyCount
+                                  orderby item.Value descending
+                                  select item;
+                familyFrequency.Clear();
+                foreach (var item in sortedRoots)
+                {
+
+                    if (item.Value > 0)
+                    {
+                        familyFrequency.AppendText(item.Key);
+                        familyFrequency.AppendText("\t");
+                        familyFrequency.AppendText(item.Value.ToString());
+                        familyFrequency.AppendText("\t");
+                        double f = Convert.ToDouble(Convert.ToDouble(item.Value) * 100.0 / Convert.ToDouble(numberofwords));
+                        string s = string.Format("{0:N2}%", f);
+                        familyFrequency.AppendText(s);
+                        familyFrequency.AppendText(Environment.NewLine);
+                    }
+                }
 
             }
             else
