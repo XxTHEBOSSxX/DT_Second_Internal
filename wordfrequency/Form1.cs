@@ -111,7 +111,20 @@ namespace wordfrequency
                 //If the word is found then inicrament the count by one 
                 words[match.Value] = currentCount;
                 currentCount = 0;
-                
+
+                //Get the root word for the given word
+                if (family.TryGetValue(match.Value, out root))
+                {
+                    //root = family[match.Value];
+                    //  Get the count of the rootword from the dictionary 
+                    if (rootwords.TryGetValue(root, out currentCount))
+                    {
+
+                        currentCount++;
+                        //inrament the count of root word by one
+                        rootwords[root] = currentCount;
+                    }
+                }
             }
         }
 
@@ -165,6 +178,7 @@ namespace wordfrequency
                 //Calculate frequencies for words 
                 CountWordsInText(richTextBox1.Text, words, familyCount, familyWords);
 
+
                 var sortedwords = from item in words
                                   orderby item.Value descending
                                   select item;
@@ -181,11 +195,14 @@ namespace wordfrequency
                         wordFrequency.AppendText(item.Value.ToString());
                         wordFrequency.AppendText("\t");
 
-                      
+                        double f = Convert.ToDouble(Convert.ToDouble(item.Value) * 100.0 / Convert.ToDouble(numberofwords));//Truncase result to two decimal places
+                        string s = string.Format("{0:N2}%", f);
+                        wordFrequency.AppendText(s);
                         wordFrequency.AppendText(Environment.NewLine);
 
                     }
                 }
+
 
             }
             else
