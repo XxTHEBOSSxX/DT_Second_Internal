@@ -192,6 +192,11 @@ namespace wordfrequency
 
                         wordFrequency.AppendText(item.Key);
                         wordFrequency.AppendText("\t");
+                         
+                        if (item.Key.ToString().Length < 8)
+                        {
+                            wordFrequency.AppendText("\t");
+                        }
                         wordFrequency.AppendText(item.Value.ToString());
                         wordFrequency.AppendText("\t");
 
@@ -214,7 +219,12 @@ namespace wordfrequency
                     if (item.Value > 0)
                     {
                         familyFrequency.AppendText(item.Key);
+
                         familyFrequency.AppendText("\t");
+                        if (item.Key.ToString().Length < 8)
+                        {
+                            familyFrequency.AppendText("\t");
+                        }
                         familyFrequency.AppendText(item.Value.ToString());
                         familyFrequency.AppendText("\t");
                         double f = Convert.ToDouble(Convert.ToDouble(item.Value) * 100.0 / Convert.ToDouble(numberofwords));
@@ -227,7 +237,7 @@ namespace wordfrequency
             }
             else
             {
-                MessageBox.Show("Please enter propper text.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("There is no text to analyse,", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.richTextBox1.Focus();
             }
         }
