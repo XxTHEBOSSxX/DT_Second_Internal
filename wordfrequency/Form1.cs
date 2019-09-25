@@ -47,17 +47,82 @@ namespace wordfrequency
             return value.Length;
 
         }
+        private void GetWordsFromFile(string fileName, Dictionary<string, int> listOfWords,
+            Dictionary<string, int> rootWords,
+            Dictionary<string, string> family)
+        {
+            // Open the text file an read by line
+            using (StreamReader file = new StreamReader(fileName))
+            {
+                string line;
+
+                string rootWord = "";
+                //For each line in the text file seperate the word from the count and findout if the word is rooot word or not
+                //For rootwords the words starts from the begining of the line for other words the word starts after that tab
+                while ((line = file.ReadLine()) != null)
+
+                {
+
+                    string[] parts = line.Split(' ');
+                    if (string.IsNullOrEmpty(line)) break;
+                    char f = line[0];
+                    string word;
+                    word = parts[0];
+                    word = Regex.Replace(word, "[ \n\r\t]+", "");
+                    //If the word is a root word then add it in the rootWords dictionary and remember it in the variable rootWord
+                    if (!((f == '\t') || (f == ' ')))
+
+                    {
+
+                        family.Add(word, word);
+                        rootWords.Add(word, Convert.ToInt32(parts[1]));
+                        rootWord = word;
+
+                    }
+                    // If the word is not a rootword then add it in the dicitonary family with its 'rootword' that we rememebred also 
+                    //Also add the word in the list of all the words 
+                    else
+                    {
 
 
-        //'Analyse' button that the user presses to analyse the text (word count, character count, frequency ect..)
-        private void button1_Click(object sender, EventArgs e)
+                        family.Add(word, rootWord);
+                        listOfWords.Add(word, Convert.ToInt32(parts[1]));
+                    }
+                }
+                file.Close();
+            }
+        }
+
+            //'Analyse' button that the user presses to analyse the text (word count, character count, frequency ect..)
+            private void button1_Click(object sender, EventArgs e)
         {
             if (this.richTextBox1.Text != "")
             {
 
                 this.richTextBox1.Focus();
                 //this.richTextBox1.Clear();
-               
+                //words - dictionary with words and their count 
+                //The word is the key and value is the count
+                Dictionary<string, int> words = new Dictionary<string, int>();
+                words.Clear();
+                //familyWords - dictionary with words and their roots
+                //The word is the key and the value is the root word
+                Dictionary<string, string> familyWords = new Dictionary<string, string>();
+                familyWords.Clear();
+                //familyCount - dictionary with root words and their counts
+                //The rootword is the key and the value is the count
+                Dictionary<string, int> familyCount = new Dictionary<string, int>();
+                familyCount.Clear();
+                //Load all the words from different textfiles.
+                //Text file names are basewrd<index>.txt
+                //Wher inex is 1 - 34
+                for (int i = 1; i <= 34; ++i)
+                {
+                    string inputfile = "basewrd";
+                    string ext = ".txt";
+                    inputfile = string.Concat(inputfile, i.ToString(), ext);
+                    GetWordsFromFile(inputfile, words, familyCount, familyWords);//load the words from the text file in different dictionarys
+                }
                 richTextBox2.AppendText("Word count: ");
                
                
