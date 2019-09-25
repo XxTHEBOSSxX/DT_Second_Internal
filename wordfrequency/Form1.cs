@@ -22,31 +22,8 @@ namespace wordfrequency
         
         
 
-        //This function counts the number of words in the user input
-        // input :
-        // input - user text 
-        // output:
-        // int - number of words
-        private int WordCount(string input)
-        {
-            //Seperate all the words using spaces
-            string[] w = input.Split(' ');
         
-            return w.Length;
-        }
-
-
-        //Count the number of characters including spaces and punctionation
-        // input :
-        // value - user text 
-        // output:
-        // int - number of characters
-        static int CountChars(string value)
-        {
-
-            return value.Length;
-
-        }
+        
 
 
         //'Analyse' button that the user presses to analyse the text (word count, character count, frequency ect..)
@@ -56,15 +33,7 @@ namespace wordfrequency
             {
 
                 this.richTextBox1.Focus();
-                
-                //Display character count in text box
-
-                richTextBox3.Clear();
-                richTextBox3.AppendText("Char Count: ");
-
-                int numberofchars = CountChars(richTextBox1.Text);
-                string Countchars = Convert.ToString(numberofchars);
-                richTextBox3.AppendText(Countchars);
+                this.richTextBox1.Clear();
             }
             else
             {
