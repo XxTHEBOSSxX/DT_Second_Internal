@@ -1,0 +1,32 @@
+C:\wordfrequency\wordfrequency\obj\Debug\wordfrequency.csprojAssemblyReference.cache
+C:\wordfrequency\wordfrequency\obj\Debug\wordfrequency.Properties.Resources.resources
+C:\wordfrequency\wordfrequency\obj\Debug\wordfrequency.csproj.GenerateResource.cache
+C:\wordfrequency\wordfrequency\obj\Debug\wordfrequency.csproj.CoreCompileInputs.cache
+C:\wordfrequency\wordfrequency\bin\Debug\wordfrequency.exe.config
+C:\wordfrequency\wordfrequency\bin\Debug\wordfrequency.exe
+C:\wordfrequency\wordfrequency\bin\Debug\wordfrequency.pdb
+C:\wordfrequency\wordfrequency\obj\Debug\wordfrequency.exe
+C:\wordfrequency\wordfrequency\obj\Debug\wordfrequency.pdb
+C:\wordfrequency\wordfrequency\obj\Debug\wordfrequency.Form1.resources
+C:\Users\danie\source\repos\wordfrequency\wordfrequency\obj\Debug\wordfrequency.csprojAssemblyReference.cache
+C:\Users\danie\source\repos\wordfrequency\wordfrequency\obj\Debug\wordfrequency.Form1.resources
+C:\Users\danie\source\repos\wordfrequency\wordfrequency\obj\Debug\wordfrequency.Properties.Resources.resources
+C:\Users\danie\source\repos\wordfrequency\wordfrequency\obj\Debug\wordfrequency.csproj.GenerateResource.cache
+C:\Users\danie\source\repos\wordfrequency\wordfrequency\obj\Debug\wordfrequency.csproj.CoreCompileInputs.cache
+C:\Users\danie\source\repos\wordfrequency\wordfrequency\obj\Debug\wordfrequency.exe
+C:\Users\danie\source\repos\wordfrequency\wordfrequency\obj\Debug\wordfrequency.pdb
+C:\Users\danie\source\repos\wordfrequency\wordfrequency\bin\Debug\wordfrequency.exe.config
+C:\Users\danie\source\repos\wordfrequency\wordfrequency\bin\Debug\wordfrequency.exe
+C:\Users\danie\source\repos\wordfrequency\wordfrequency\bin\Debug\wordfrequency.pdb
+C:\Users\Daniel Brink\Desktop\Daniel Brink Stuff\wordfrequency - Copy\wordfrequency\obj\Debug\wordfrequency.exe
+C:\Users\Daniel Brink\Desktop\Daniel Brink Stuff\wordfrequency - Copy\wordfrequency\obj\Debug\wordfrequency.pdb
+C:\Users\Daniel Brink\Desktop\Daniel Brink Stuff\Copy for repository\WordFrequency-itl\wordfrequency\obj\Debug\wordfrequency.csprojAssemblyReference.cache
+C:\Users\Daniel Brink\Desktop\Daniel Brink Stuff\Copy for repository\WordFrequency-itl\wordfrequency\obj\Debug\wordfrequency.Form1.resources
+C:\Users\Daniel Brink\Desktop\Daniel Brink Stuff\Copy for repository\WordFrequency-itl\wordfrequency\obj\Debug\wordfrequency.Properties.Resources.resources
+C:\Users\Daniel Brink\Desktop\Daniel Brink Stuff\Copy for repository\WordFrequency-itl\wordfrequency\obj\Debug\wordfrequency.csproj.GenerateResource.cache
+C:\Users\Daniel Brink\Desktop\Daniel Brink Stuff\Copy for repository\WordFrequency-itl\wordfrequency\obj\Debug\wordfrequency.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Brink\Desktop\Daniel Brink Stuff\Copy for repository\WordFrequency-itl\wordfrequency\obj\Debug\wordfrequency.exe
+C:\Users\Daniel Brink\Desktop\Daniel Brink Stuff\Copy for repository\WordFrequency-itl\wordfrequency\obj\Debug\wordfrequency.pdb
+C:\Users\Daniel Brink\Desktop\Daniel Brink Stuff\Copy for repository\WordFrequency-itl\wordfrequency\bin\Debug\wordfrequency.exe.config
+C:\Users\Daniel Brink\Desktop\Daniel Brink Stuff\Copy for repository\WordFrequency-itl\wordfrequency\bin\Debug\wordfrequency.exe
+C:\Users\Daniel Brink\Desktop\Daniel Brink Stuff\Copy for repository\WordFrequency-itl\wordfrequency\bin\Debug\wordfrequency.pdb

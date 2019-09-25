@@ -1,0 +1,9 @@
+C:\wordfrequency\wordfrequency\bin\Release\wordfrequency.exe.config
+C:\wordfrequency\wordfrequency\bin\Release\wordfrequency.exe
+C:\wordfrequency\wordfrequency\bin\Release\wordfrequency.pdb
+C:\wordfrequency\wordfrequency\obj\Release\wordfrequency.csprojAssemblyReference.cache
+C:\wordfrequency\wordfrequency\obj\Release\wordfrequency.Properties.Resources.resources
+C:\wordfrequency\wordfrequency\obj\Release\wordfrequency.csproj.GenerateResource.cache
+C:\wordfrequency\wordfrequency\obj\Release\wordfrequency.csproj.CoreCompileInputs.cache
+C:\wordfrequency\wordfrequency\obj\Release\wordfrequency.exe
+C:\wordfrequency\wordfrequency\obj\Release\wordfrequency.pdb
