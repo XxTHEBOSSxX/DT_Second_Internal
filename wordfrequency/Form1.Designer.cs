@@ -21,13 +21,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.userTextInsert = new System.Windows.Forms.RichTextBox();
+            this.analyseButton = new System.Windows.Forms.Button();
+            this.wordCountDisplay = new System.Windows.Forms.RichTextBox();
+            this.characterCountDisplay = new System.Windows.Forms.RichTextBox();
             this.wordFrequency = new System.Windows.Forms.RichTextBox();
             this.familyFrequency = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.clearAllButton = new System.Windows.Forms.Button();
             this.lable1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,39 +39,40 @@
             this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // userTextInsert
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 30);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(427, 232);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.userTextInsert.Location = new System.Drawing.Point(12, 30);
+            this.userTextInsert.Name = "userTextInsert";
+            this.userTextInsert.Size = new System.Drawing.Size(427, 232);
+            this.userTextInsert.TabIndex = 0;
+            this.userTextInsert.Text = "";
             // 
-            // button1
+            // analyseButton
             // 
-            this.button1.Location = new System.Drawing.Point(12, 268);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(422, 45);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Analyze";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.analyseButton.Location = new System.Drawing.Point(12, 268);
+            this.analyseButton.Name = "analyseButton";
+            this.analyseButton.Size = new System.Drawing.Size(422, 45);
+            this.analyseButton.TabIndex = 1;
+            this.analyseButton.Text = "Analyze";
+            this.analyseButton.UseVisualStyleBackColor = true;
+            this.analyseButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // richTextBox2
+            // wordCountDisplay
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(612, 72);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(150, 101);
-            this.richTextBox2.TabIndex = 6;
-            this.richTextBox2.Text = "";
+            this.wordCountDisplay.Location = new System.Drawing.Point(612, 72);
+            this.wordCountDisplay.Name = "wordCountDisplay";
+            this.wordCountDisplay.Size = new System.Drawing.Size(150, 101);
+            this.wordCountDisplay.TabIndex = 6;
+            this.wordCountDisplay.Text = "";
+            this.wordCountDisplay.TextChanged += new System.EventHandler(this.wordCountDisplay_TextChanged);
             // 
-            // richTextBox3
+            // characterCountDisplay
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(456, 72);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(150, 101);
-            this.richTextBox3.TabIndex = 7;
-            this.richTextBox3.Text = "";
+            this.characterCountDisplay.Location = new System.Drawing.Point(456, 72);
+            this.characterCountDisplay.Name = "characterCountDisplay";
+            this.characterCountDisplay.Size = new System.Drawing.Size(150, 101);
+            this.characterCountDisplay.TabIndex = 7;
+            this.characterCountDisplay.Text = "";
             // 
             // wordFrequency
             // 
@@ -89,15 +90,15 @@
             this.familyFrequency.TabIndex = 9;
             this.familyFrequency.Text = "";
             // 
-            // button2
+            // clearAllButton
             // 
-            this.button2.Location = new System.Drawing.Point(440, 268);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(348, 45);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Clear all";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.clearAllButton.Location = new System.Drawing.Point(440, 268);
+            this.clearAllButton.Name = "clearAllButton";
+            this.clearAllButton.Size = new System.Drawing.Size(348, 45);
+            this.clearAllButton.TabIndex = 10;
+            this.clearAllButton.Text = "Clear all";
+            this.clearAllButton.UseVisualStyleBackColor = true;
+            this.clearAllButton.Click += new System.EventHandler(this.Button2_Click);
             // 
             // lable1
             // 
@@ -194,15 +195,15 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lable1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.clearAllButton);
             this.Controls.Add(this.familyFrequency);
             this.Controls.Add(this.wordFrequency);
-            this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.characterCountDisplay);
+            this.Controls.Add(this.wordCountDisplay);
+            this.Controls.Add(this.analyseButton);
+            this.Controls.Add(this.userTextInsert);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Word Frequency Counter";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,13 +211,13 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox userTextInsert;
+        private System.Windows.Forms.Button analyseButton;
+        private System.Windows.Forms.RichTextBox wordCountDisplay;
+        private System.Windows.Forms.RichTextBox characterCountDisplay;
         private System.Windows.Forms.RichTextBox wordFrequency;
         private System.Windows.Forms.RichTextBox familyFrequency;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button clearAllButton;
         private System.Windows.Forms.Label lable1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

@@ -132,10 +132,10 @@ namespace wordfrequency
         //'Analyse' button that the user presses to analyse the text (word count, character count, frequency ect..)
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.richTextBox1.Text != "")
+            if (this.userTextInsert.Text != "")
             {
 
-                this.richTextBox1.Focus();
+                this.userTextInsert.Focus();
                 //this.richTextBox1.Clear();
                 //words - dictionary with words and their count 
                 //The word is the key and value is the count
@@ -159,24 +159,24 @@ namespace wordfrequency
                     inputfile = string.Concat(inputfile, i.ToString(), ext);
                     GetWordsFromFile(inputfile, words, familyCount, familyWords);//load the words from the text file in different dictionarys
                 }
-                richTextBox2.AppendText("Word count: ");
+                wordCountDisplay.AppendText("Word count: ");
                
                
                 //Display word count in text box
-                int numberofwords = WordCount(richTextBox1.Text);
+                int numberofwords = WordCount(userTextInsert.Text);
                 string wordCount = Convert.ToString(numberofwords);
-                richTextBox2.AppendText(wordCount);
+                wordCountDisplay.AppendText(wordCount);
                 //Display character count in text box
 
-                richTextBox3.Clear();
-                richTextBox3.AppendText("Char Count: ");
+                characterCountDisplay.Clear();
+                characterCountDisplay.AppendText("Char Count: ");
 
-                int numberofchars = CountChars(richTextBox1.Text);
+                int numberofchars = CountChars(userTextInsert.Text);
                 string Countchars = Convert.ToString(numberofchars);
-                richTextBox3.AppendText(Countchars);
+                characterCountDisplay.AppendText(Countchars);
 
                 //Calculate frequencies for words 
-                CountWordsInText(richTextBox1.Text, words, familyCount, familyWords);
+                CountWordsInText(userTextInsert.Text, words, familyCount, familyWords);
 
 
                 var sortedwords = from item in words
@@ -238,17 +238,22 @@ namespace wordfrequency
             else
             {
                 MessageBox.Show("There is no text to analyse,", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.richTextBox1.Focus();
+                this.userTextInsert.Focus();
             }
         }
         // Pressing this button will clear all the text boxes. 
         private void Button2_Click(object sender, EventArgs e)
         {
-            this.richTextBox1.Clear();
-            this.richTextBox2.Clear();
-            this.richTextBox3.Clear();
+            this.userTextInsert.Clear();
+            this.wordCountDisplay.Clear();
+            this.characterCountDisplay.Clear();
             familyFrequency.Clear();
             wordFrequency.Clear();
+
+        }
+
+        private void wordCountDisplay_TextChanged(object sender, EventArgs e)
+        {
 
         }
     } 
